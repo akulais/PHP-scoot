@@ -1,0 +1,94 @@
+@media only screen and (max-width: 480px) {
+    /*body { background-color: gray; }*/
+    p { font-size: 0.5em; }
+    h1 { font-size: 2.5em; }
+	}
+@media only screen and (min-width: 481px) {
+    /*body { background-color: black; }*/
+    p { font-size: 1em; }
+    h1 { font-size: 4em; }
+	}
+@media only screen and (min-width: 1024px) {
+ /*   body { background-color: black; }*/
+    p { font-size: 2em; }
+    h1 { font-size: 5em; }
+	}
+/*index view page css*/
+#boom_boom_body {
+	padding: 20px;
+	background-color: gray;
+	display: inline-block;
+	color: red;
+}
+#child_img {
+    width: 150px;
+    height: 150px;
+    border: 1px solid green;
+    display: inline-block;
+    margin: 25px;
+    vertical-align: top;
+}
+#top_row {
+	display: inline-block;
+	width: 650px;
+	height: 200px;
+	border: 2px solid black;
+}
+#bottom_row {
+	display: inline-block;
+	width: 650px;
+	height: 350px;
+	border: 2px solid black;
+}
+table {
+    width: 590px;
+    height: 200px;
+    margin-left: 25px;  
+}
+table td {
+    width: 95px;
+    height: 25px;
+    text-align: center;
+    border: 1px solid blue;
+}
+#submit_btn {
+	width: 75px;
+	height: 75px;
+	border-radius: 25px;
+	display: inline-block;
+}
+#btn {
+	width: 90px;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 5px;
+	margin-top: 50px;
+}
+.progress-container {
+	width: 55%;
+	height: 25px;
+	position: relative;
+	border: 2px solid black;
+	border-radius: 20px;
+	margin: 0 auto;
+	background-color: #87CEEB;
+	color: black;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 20px;
+	margin-top: 80px;
+}
+#boom_bar {
+	color: white;
+	height: 100%;
+	line-height: inherit;
+	background-color: green;
+	position: absolute;
+	border-radius: 20px;
+}
+#boom {
+	margin: 0 auto;
+	margin-left: 25px;
+	color: white;
+	margin-top: 35px;
+}

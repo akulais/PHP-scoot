@@ -1,0 +1,70 @@
+@media only screen and (max-width: 480px) {
+    /*body { background-color: gray; }*/
+    p { font-size: 0.5em; }
+    h1 { font-size: 2.5em; }
+	}
+@media only screen and (min-width: 481px) {
+    /*body { background-color: black; }*/
+    p { font-size: 1em; }
+    h1 { font-size: 4em; }
+	}
+@media only screen and (min-width: 1024px) {
+ /*   body { background-color: black; }*/
+    p { font-size: 2em; }
+    h1 { font-size: 5em; }
+	}
+
+#add_child_body_h2 {
+    color: blue;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0px 0px 0px;
+}
+#top_row {
+    width: 500px;
+    height: 225px;
+    display: inline-block;
+    border: 2px solid black;
+}
+#avatars {
+    text-align: center;
+    width: 80%;
+    padding: 0px 35px;
+    display: inline-block;
+    margin: 0 auto;
+}
+.avatar {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+}
+#add_child_btn {
+    width: 200px;
+    border-radius: 25px;
+    border: 3px groove blue;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+#add_child_btn:hover {
+    width: 200px;
+    border-radius: 25px;
+    border: 3px groove blue;
+    font-weight: bold;
+    margin-top: 20px;
+    color: yellow;
+    text-align: center;
+    box-shadow: 0px 0px 5px 5px blue;
+    background-color: #3C4352;
+}
+label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #f00;
+}

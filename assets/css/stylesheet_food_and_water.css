@@ -1,0 +1,89 @@
+@media only screen and (max-width: 480px) {
+    /*body { background-color: gray; }*/
+    p { font-size: 0.5em; }
+    h1 { font-size: 2.5em; }
+	}
+@media only screen and (min-width: 481px) {
+    /*body { background-color: black; }*/
+    p { font-size: 1em; }
+    h1 { font-size: 4em; }
+	}
+@media only screen and (min-width: 1024px) {
+ /*   body { background-color: black; }*/
+    p { font-size: 2em; }
+    h1 { font-size: 5em; }
+	}
+/*index view page css*/
+#food_and_water_body {
+	padding: 20px;
+	background-color: gray;
+	display: inline-block;
+	color: red;
+}
+#child_img {
+    width: 150px;
+    height: 150px;
+    border: 1px solid green;
+    display: inline-block;
+    margin: 25px;
+    vertical-align: top;
+}
+#top_row {
+	display: inline-block;
+	width: 800px;
+	height: 200px;
+	border: 2px solid black;
+}
+#bottom_row {
+	display: inline-block;
+	width: 800px;
+	height: 200px;
+	border: 2px solid black;
+}
+#likes_dislikes {
+	display: inline-block;
+	width: 575px;
+	height: 200px;
+}
+.top_row {
+	width: 500px;
+	display: inline-block;
+	margin: 0 auto;
+	padding: 5px;
+}
+.bio {
+	width: 250px;
+	display: inline-block;
+}
+label {
+	width: 75px;
+	text-align: right;
+	margin-right: 5px;
+	padding: 5px;
+}
+input {
+	width: 125px;
+}
+.comments_water {
+	width: 230px;
+}
+.comments_food {
+	width: 230px;
+}
+#submit_btn {
+	width: 75px;
+	height: 75px;
+	border-radius: 25px;
+	display: inline-block;
+}
+#entries {
+	width: 680px;
+	display: inline-block;
+}
+#btn {
+	width: 90px;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 5px;
+	margin-top: 50px;
+}

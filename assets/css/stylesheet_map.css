@@ -1,0 +1,26 @@
+@media only screen and (max-width: 480px) {
+    /*body { background-color: gray; }*/
+    p { font-size: 0.5em; }
+    h1 { font-size: 2.5em; }
+	}
+@media only screen and (min-width: 481px) {
+    /*body { background-color: black; }*/
+    p { font-size: 1em; }
+    h1 { font-size: 4em; }
+	}
+@media only screen and (min-width: 1024px) {
+ /*   body { background-color: black; }*/
+    p { font-size: 2em; }
+    h1 { font-size: 5em; }
+	}
+
+/*Map view page css*/
+#map_body {
+	padding: 0px;
+    margin: 0px;
+    height: 100%;
+	background-color: #20B4E6;
+}
+#map {
+    height: 100%;
+}
