@@ -15,7 +15,7 @@ class Scoot extends CI_Model {
     function get_children() {
         $query = "SELECT childs.*, events.category FROM childs
         LEFT JOIN events ON childs.id = events.child_id 
-        AND category LIKE 'booms'";
+        AND category LIKE 'booms' GROUP BY childs.id";
         return $this->db->query($query)->result_array();
     }
 
@@ -110,6 +110,18 @@ class Scoot extends CI_Model {
         $query = "UPDATE test SET field1 = '".$quickVar1a."' where field1 != '".$quickVar1a."'";
         return $this->db->query($query);
         endif;
+    }
+
+    function get_boom_dates($id) {
+        $query1 = "SELECT events.created_at, childs.id, childs.name FROM events LEFT JOIN childs ON events.child_id = childs.id WHERE childs.id = ? AND category LIKE 'booms' ORDER BY events.created_at Desc LIMIT 2";
+        $values1 = array($id);
+        $dates1 = $this->db->query($query1, $values1)->result_array();
+
+        $query2 = "SELECT events.created_at, childs.id, childs.name FROM events LEFT JOIN childs ON events.child_id = childs.id WHERE childs.id = ? AND category LIKE 'booms' ORDER BY events.created_at Desc LIMIT 2";
+        $values2 = array($id);
+        $dates2= $this->db->query($query2, $values2)->result_array();
+
+        return $dates = $dates1 + $dates2;
     }
 
 }

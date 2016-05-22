@@ -15,8 +15,8 @@
 	</head>
 
 	<body>
-<!-- api key = AIzaSyCWAalvhofjGHHQVH8CONPn_5HeAK9Qkvg -->
-		<iframe width="90%" height="500px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBsvz4KB38nW-sWE0nmNkwWbDrUvUVu07k&q=hospitals+near+me"></iframe>
+
+		<iframe width="90%" height="500px" frameborder="0" style="border:0" <?= $key ?>></iframe>
 	
 <a href="/main/users_profiles">Go Back</a>
 

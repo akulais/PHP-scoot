@@ -21,15 +21,18 @@
 
                 <h1 class="page-header">Welcome <?= $user['name'] ?><br></h1>
             <h4>List of children</h4>
-            <?php if(isset($child)) { 
-                foreach($child as $childs) { ?>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                            <?= $childs['name'] ?>'s <?= $childs['category'] ?>
-                        </div>
-                    </div>
-                <?php } ?>
-            <?php  } ?>
+                <?php if(isset($child)) { 
+                    $count = 0;
+                    foreach($child as $childs) {
+                        echo '<div class="progress">';
+                            echo  $div[$count]; ?>
+                       <?= $childs['name'] ?>'s <?= $childs['category'] ?>
+ <!-- the projected date is the aria-valuemax           the min should be the date1            current should be projected - date1(count_down)  -->
+ <!-- MAKE A PERCENTAGE ON THE BACK END AND PUT IT IN THE WIDTH PORTION OF THE DIV TO SHOW PROGRESS -->                                           
+                        <?php echo '</div>';
+                    echo '</div>';
+                $count++; } } ?>
+            
 
             <form method="post" action="/main/reset" role='form' class="form-group col-sm-4 col-sm-offset-8">
                 <input type="submit" value="log out" class="btn btn-success btn-lg form-control">
@@ -42,10 +45,12 @@
         <div class="row">
 
             <ul class="nav navbar-nav col-sm-6">
-                <?php if(isset($child)) { 
-                    foreach($child as $childs) { ?>
+                <?php if(isset($child)) { ?>
+                    <?php foreach($child as $childs) { ?>
+                     
                         <li><a href="/main/select_child/<?= $childs['id'] ?>"><?= $childs['name'] ?></a></li>
-                    <?php } ?>
+
+                    <?php  } ?>
                 <?php  } ?>
             </ul>
 
@@ -67,7 +72,7 @@
 
         <div role='form' class="form-group col-md-2">
             <form method="post" action="/main/map" role='form'>
-                <input type="submit" value="Find a hospital near you" class="btn btn-link btn-lg form-control"> 
+                <input type="submit" value="Find a hospital near you" class="btn btn-link form-control"> 
             </form>
         </div>
 
