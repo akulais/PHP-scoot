@@ -119,5 +119,20 @@ class Scoot extends CI_Model {
         $values = array($id);
         return $this->db->query($query, $values);
     }
+//performs validation checks
+    public function validate($post) {
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('name', 'Name', 'required');
+        $this->form_validation->set_rules('role', 'Role', 'required');
+        $this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[users.email]');
+        $this->form_validation->set_rules('password', 'Password', 'required|min_length[8]|matches[confirm_password]');
+        $this->form_validation->set_rules('confirm_password', 'Password Confirmation', 'trim|required|matches[password]');
+    
+        if($this->form_validation->run()) {
+            return "valid";
+        } else {
+            return array(validation_errors());
+        }
+    }
 
 }

@@ -37,14 +37,9 @@ class Main extends CI_Controller {
     }
 //REGISTERS NEW USERS TO THE DB
 	public function register() {
-		$this->load->library('form_validation');
-    	$this->form_validation->set_rules('name', 'Name', 'required');
-    	$this->form_validation->set_rules('role', 'Role', 'required');
-    	$this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[users.email]');
-    	$this->form_validation->set_rules('password', 'Password', 'required|min_length[8]|matches[confirm_password]');
-    	$this->form_validation->set_rules('confirm_password', 'Password Confirmation', 'trim|required|matches[password]');
+		$result = $this->Scoot->validate($this->input->post());
 
-		if ($this->form_validation->run()==FALSE) {
+		if ($result != 'valid') {
       		$this->view_data['errors'] = validation_errors();
       		$this->session->set_flashdata('error', $this->view_data['errors']);
       		redirect('/index');
@@ -94,7 +89,7 @@ class Main extends CI_Controller {
         $div = array();
         $faces = array();
 
-        $recent = new DateTime();                                   //GIVES A NEW CURRENT OBJECT
+        $recent = new DateTime();                                  
 
         foreach ($child as $value) {
             $rates = $this->Scoot->get_boom_dates($value['id']);
@@ -111,23 +106,16 @@ class Main extends CI_Controller {
                         $date2 = $recent;
                     }
 
-            $event_diff = date_diff($date2,$date1);                 //date1 = most recent;  date2 = event prior    SUBTRACTION
-            // var_dump($event_diff,'event_diff 1st');              //check good, no invert attributes(negative)   
+            $event_diff = date_diff($date2,$date1);     
             $pickles = $event_diff->d;
-            // var_dump($pickles, 'testing');                
-            $projected_date = date_add($date1,$event_diff);         //ADDS THE MOST RECENT + DAYS BETWEEN THE MOST RECENT AND PRIOR
-            // var_dump($projected_date,'projected_date');          //check good, all dates are in the future
-            $finally = date_diff($recent,date_add($date1,$event_diff));           //gives the days remaining, Countdown (((date1 - date2) +date1) - now())
-            // $date_avg = date_diff($recent,$date1);                  //    ((future - now)/diff(A-B)) * 100
-            var_dump($finally,'finally');                             
-            //    (projected_date - recent) / date1 - date2         (((date1 + (date1-date2)) - recent) / (date1 - date2))*100
+            $projected_date = date_add($date1,$event_diff);
+            $finally = date_diff($recent,date_add($date1,$event_diff));           
             $a = date_diff($recent,date_add($date1,$event_diff));
             $b = date_diff($date2,$date1);
 
 
             if ($a->days = 0) { $a->days = 1;}
             if ($b->days = 0) { $b->days = 1;}
-                var_dump(percentages($a->days,$b->days));
 
             if (percentages($a->days,$b->days) > 80) {
                 $div[] = '<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:' . percentages($a->days,$b->days) .'%">';
