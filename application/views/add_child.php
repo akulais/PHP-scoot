@@ -21,7 +21,7 @@
             <h2 id="add_child_body_h2">Choose an Avatar</h2>
         </div>
     
-        <form method="post" action="/main/new_child" role='form'>
+        <form method="post" action="new_child" role='form'>
             <div id="avatars" class="form-group row">
 
                 <label>
@@ -142,9 +142,9 @@
                 <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="form-group">
                         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xs-offset-9 col-sm-offset-9 col-md-offset-9 col-lg-offset-9">
-                            <form method="post" action="/main/add_child" role='form'>
+                            <!-- <form method="post" action="add_child" role='form'> -->
                                 <input type="submit" value="Add child" class="btn buttons btn-lg form-control">
-                            </form>
+                            <!-- </form> -->
                         </div>
                     </div>
                 </div>
@@ -154,7 +154,7 @@
 
         </form>
 
-<a class="btn btn-lg go_back" href="/main/users_profiles">Go Back</a>
+<a class="btn btn-lg go_back" href="users_profiles">Go Back</a>
     
         </div>
 

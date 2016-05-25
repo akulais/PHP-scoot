@@ -21,7 +21,7 @@
     <h1 class="page-header">Please <span class="col-g">login</span> or <span class='col-g'>register</span></h1>
 
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-        <form method="post" action="/main/register" role='form' class="form-horizontal">
+        <form method="post" action="/register" role='form' class="form-horizontal">
             
             <input type="hidden" name="action" value="register" class="form-control">
             
@@ -96,7 +96,7 @@
 
 
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-        <form method="post" action="/main/login" role='form' class="form-horizontal">
+        <form method="post" action="/login" role='form' class="form-horizontal">
             <input type="hidden" name="action" value="login" class="form-control">
             
             <div class="form-group"> 

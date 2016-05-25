@@ -38,25 +38,25 @@
 				<?php if ($child['image'] == 3) { ?><img class='child_image' src="../../assets/img/stk_img-3.png" alt="user"><?php ;} ?>
 				<?php if ($child['image'] == 4) { ?><img class='child_image' src="../../assets/img/stk_img-4.png" alt="user"><?php ;} ?>
 				<?php if ($child['image'] == 5) { ?><img class='child_image' src="../../assets/img/stk_img-5.png" alt="user"><?php ;} ?>
-				<?php if ($child['image'] == 6) { ?><img class='child_image' src="../../assets/img/stk_img-6.png" alt="user"><?php ;} ?>
+				<?php if ($child['image'] == 6) { ?><img class='child_image' src="../../assets/img/medical_icon.png" alt="user"><?php ;} ?>
 				<?php if ($child['image'] == 7) { ?><img class='child_image' src="../../assets/img/stk_img-7.png" alt="user"><?php ;} ?>
 				<?php if ($child['image'] == 8) { ?><img class='child_image' src="../../assets/img/stk_img-8.png" alt="user"><?php ;} ?>
 				<?php if (!$child['image']) { ?><img class='child_image' src="../../assets/img/user_stock_image.png" alt="user"><?php ;} ?>
 
 	<div class="row">
-		<a role='button' class="delete btn btn-md" onclick="return myConfirm();" href="/main/delete/<?= $child['id'] ?>";>Delete</a>
+		<a role='button' class="delete btn btn-md" onclick="return myConfirm();" href="/delete/<?= $child['id'] ?>";>Delete</a>
 	</div>
 	<hr class="header">
 	<h2 >Age: <?= date("Y") - date("Y", strtotime($child['age'])) ?></h2>
 	<h4><u style="color:red">ALLERGIES:</u>    <span style="color:gray"><?= $child['allergies'] ?></span></h4>
 		
-		<a href="/main/food_and_water/<?= $child['id'] ?>">
+		<a href="/food_and_water/<?= $child['id'] ?>">
 			<img class="icon" src="../../assets/img/food_icon3.png" alt="food"></a>
 
-		<a href="/main/medicine/<?= $child['id'] ?>">
+		<a href="/medicine/<?= $child['id'] ?>">
 			<img class="icon" src="../../assets/img/med4.png" alt="medicine"></a>
 
-		<a href="/main/boom_boom/<?= $child['id'] ?>">
+		<a href="/boom_boom/<?= $child['id'] ?>">
 			<img class="icon" src="../../assets/img/boom2.png" alt="boom"></a>
 
   		</div>
@@ -94,7 +94,7 @@
 									<td><?= date("h a D", strtotime($datas['event_time'])) ?></td>
 									<td><?= $datas['person']; 
 										if ($datas['user2_id'] == $user['user_id'] ) { ?>
-											<a onclick="return confirmEvent();" href="/main/rem_entry/<?= $datas['id_event'] ?>" ><span class="glyphicon glyphicon-remove"></span></a>
+											<a onclick="return confirmEvent();" href="/rem_entry/<?= $datas['id_event'] ?>" ><span class="glyphicon glyphicon-remove"></span></a>
 												<?php } ?>
 													</td>
 	  							</tr>  
@@ -108,8 +108,8 @@
   			</div>
 
 
-<a class="map buttons btn btn-md" href="/main/map">Find a hospital near you</a>
-<a class="go_back buttons btn btn-md" href="/main/users_profiles">Go Back</a>
+<a class="map buttons btn btn-md" href="/map">Find a hospital near you</a>
+<a class="go_back buttons btn btn-md" href="/users_profiles">Go Back</a>
 
 
 		</div>

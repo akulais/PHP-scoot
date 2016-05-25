@@ -75,7 +75,7 @@
 								    <td><?= date("d M Y", strtotime($info['date'])) ?></td>
 								    <td><?= $info['person']; 
 										if ($info['user2_id'] == $user['user_id'] ) { ?>
-											<a onclick="return confirmEvent();" href="/main/rem_entry/<?= $info['med_id'] ?>" ><span class="glyphicon glyphicon-trash"></span></a>
+											<a onclick="return confirmEvent();" href="/rem_entry/<?= $info['med_id'] ?>" ><span class="glyphicon glyphicon-trash"></span></a>
 												<?php } ?>
 													</td>
       							</tr>
@@ -87,7 +87,7 @@
 
       	<?php } ?>
       			<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-				<form method="post" action="/main/add_event/<?= $child['id'] ?>" role='form'>
+				<form method="post" action="/add_event/<?= $child['id'] ?>" role='form'>
 		
 					<div class="form-group">
 						<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
@@ -141,8 +141,8 @@
 
     		<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-	            	<a class='btn btn-lg btn-success map' href="/main/map">Find a hospital near you</a>
-	            	<a class="btn btn-lg btn-info go_back" href="/main/select_child/<?= $child['id'] ?>">Go Back</a>
+	            	<a class='btn btn-lg btn-success map' href="/map">Find a hospital near you</a>
+	            	<a class="btn btn-lg btn-info go_back" href="/select_child/<?= $child['id'] ?>">Go Back</a>
 	        	</div>
         	</div>
 

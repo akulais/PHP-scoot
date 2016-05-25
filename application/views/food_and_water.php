@@ -41,7 +41,7 @@
 
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 column-d">
                 
-            <form method="post" action="/main/add_event/<?= $child['id'] ?>" role='form' class="form-horizontal">
+            <form method="post" action="/add_event/<?= $child['id'] ?>" role='form' class="form-horizontal">
                 
                 <div class="form-group">
                     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
@@ -88,7 +88,7 @@
 
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 column-d">
                     
-            <form method="post" action="/main/add_event/<?= $child['id'] ?>" role='form' class="form-horizontal">
+            <form method="post" action="/add_event/<?= $child['id'] ?>" role='form' class="form-horizontal">
 
                     <div class="form-group">
                         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
@@ -134,8 +134,8 @@
         </div>
         
         <div class="find_row">
-            <a class='btn btn-lg btn-success map' href="/main/map">Find a hospital near you</a>
-            <a class="btn btn-lg btn-info go_back" href="/main/select_child/<?= $child['id'] ?>">Go Back</a>
+            <a class='btn btn-lg btn-success map' href="/map">Find a hospital near you</a>
+            <a class="btn btn-lg btn-info go_back" href="/select_child/<?= $child['id'] ?>">Go Back</a>
         </div>
 
 

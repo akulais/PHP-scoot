@@ -24,8 +24,8 @@
             <nav class="navbar navbar-inverse">
                 <div class="container-fluid nav_bar">
                     <ul class="nav navbar-nav navbar-right nav_bar">
-                        <li><a href="/main/map"><span class="glyphicon glyphicon-map-marker"></span>Find a <b>hospital</b> near you</a></li>
-                        <li><a href="/main/reset"><span class="glyphicon glyphicon-user"></span>Logout</a></li> 
+                        <li><a href="/map"><span class="glyphicon glyphicon-map-marker"></span>Find a <b>hospital</b> near you</a></li>
+                        <li><a href="/reset"><span class="glyphicon glyphicon-user"></span>Logout</a></li> 
                     </ul>
                 </div>
             </nav>
@@ -55,7 +55,7 @@
         <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="form-group">
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 col-xs-offset-4 col-sm-offset-4 col-md-offset-4 col-lg-offset-4">
-                    <form method="post" action="/main/add_child" role='form'>
+                    <form method="post" action="/add_child" role='form'>
                         <input type="submit" value="Add child" class="btn buttons btn-lg form-control">
                     </form>
                 </div>
@@ -69,7 +69,7 @@
                     <?php $count = 0; ?>
                         <?php foreach($child as $childs) { ?>
                             <?php echo $faces[$count]; ?>
-                                <li><a href="/main/select_child/<?= $childs['id'] ?>"><?= $childs['name'] ?></a></li>
+                                <li><a href="/select_child/<?= $childs['id'] ?>"><?= $childs['name'] ?></a></li>
                             <?php echo '</div>'; ?>
                     <?php $count++; ?>
                         <?php  } ?>

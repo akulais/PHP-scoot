@@ -61,7 +61,7 @@
 						<td><?= $datas['comments'] ?></td>
 						<td><?= $datas['person']; 
 							if ($datas['user2_id'] == $user['user_id'] ) { ?>
-								<a onclick="return confirmEvent();" href="/main/rem_entry/<?= $datas['boom_id'] ?>" ><span class="glyphicon glyphicon-trash"></span></a>
+								<a onclick="return confirmEvent();" href="/rem_entry/<?= $datas['boom_id'] ?>" ><span class="glyphicon glyphicon-trash"></span></a>
 							<?php } ?>
 						</td>
 		  			</tr>  
@@ -81,7 +81,7 @@
 				</tbody>
 			</table>
 
-			<form method="post" action="/main/add_event/<?= $child['id'] ?>" role='form'>
+			<form method="post" action="/add_event/<?= $child['id'] ?>" role='form'>
 
 		 		<input type="hidden" name="category" value="booms" class="form-control">
 		 		<input type="hidden" name="description" value="poop" class="form-control">
@@ -116,8 +116,8 @@
 
 
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-	            	<a class='btn btn-lg btn-success map' href="/main/map">Find a hospital near you</a>
-	            	<a class="btn btn-lg btn-info go_back" href="/main/select_child/<?= $child['id'] ?>">Go Back</a>
+	            	<a class='btn btn-lg btn-success map' href="/map">Find a hospital near you</a>
+	            	<a class="btn btn-lg btn-info go_back" href="/select_child/<?= $child['id'] ?>">Go Back</a>
 	        	</div>
         	</div>
 

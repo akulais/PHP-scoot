@@ -19,7 +19,7 @@
 			<iframe width="100%" height="100%" frameborder="0" style="border:0" <?= $key ?>></iframe>
 		</div>
 
-<a class="btn btn-lg go_back" href="/main/users_profiles">Go Back</a>
+<a class="btn btn-lg go_back" href="/users_profiles">Go Back</a>
 
 	</body>
 	
