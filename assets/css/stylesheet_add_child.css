@@ -1,61 +1,42 @@
-@media only screen and (max-width: 480px) {
-    /*body { background-color: gray; }*/
-    p { font-size: 0.5em; }
-    h1 { font-size: 2.5em; }
-	}
-@media only screen and (min-width: 481px) {
-    /*body { background-color: black; }*/
-    p { font-size: 1em; }
-    h1 { font-size: 4em; }
-	}
-@media only screen and (min-width: 1024px) {
- /*   body { background-color: black; }*/
-    p { font-size: 2em; }
-    h1 { font-size: 5em; }
-	}
+*   {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    padding: 2px;
+}
 
 #add_child_body_h2 {
-    color: blue;
+    color: gray;
     font-weight: bold;
     text-align: center;
-    margin: 10px 0px 0px 0px;
-}
-#top_row {
-    width: 500px;
-    height: 225px;
-    display: inline-block;
-    border: 2px solid black;
+    font-size: 3em;
 }
 #avatars {
     text-align: center;
-    width: 80%;
-    padding: 0px 35px;
+    padding: 20px;
     display: inline-block;
-    margin: 0 auto;
+    border: 8px groove gray;
+    border-radius: 25px;
 }
 .avatar {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     padding: 10px;
 }
-#add_child_btn {
-    width: 200px;
-    border-radius: 25px;
-    border: 3px groove blue;
-    font-weight: bold;
-    margin-top: 20px;
-    text-align: center;
+.go_back {
+  color: purple;
+  background-color: #AAADAD;
+  text-decoration: none;
+  border-radius: 15px;
+  border: 2px solid gray;
+  margin: 25px 5px 0px 5px;
 }
-#add_child_btn:hover {
-    width: 200px;
-    border-radius: 25px;
-    border: 3px groove blue;
-    font-weight: bold;
-    margin-top: 20px;
-    color: yellow;
-    text-align: center;
-    box-shadow: 0px 0px 5px 5px blue;
-    background-color: #3C4352;
+.go_back:hover {
+  color: black;
+  background-color: #8C9191;
+  text-decoration: none;
+  border-radius: 15px;
+  border: 2px solid black;
+  margin: 25px 5px 0px 5px;
 }
 label > input{ /* HIDE RADIO */
   visibility: hidden; /* Makes input not-clickable */
@@ -66,5 +47,27 @@ label > input + img{ /* IMAGE STYLES */
   border:2px solid transparent;
 }
 label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
-  border:2px solid #f00;
+  border:2px solid gray;
+  border-radius: 20px;
+}
+body {
+  background-color: #E8E8E8;
+}
+.buttons {
+  color: black;
+  font-weight: bold;
+  background-color: #AAADAD;
+  text-decoration: none;
+  border-radius: 15px;
+  border: 2px solid gray;
+  margin: 25px 5px 0px 5px;
+}
+.buttons:hover  {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border: 2px solid white;
+  text-decoration: none;
+  border-radius: 15px;
+  margin: 25px 5px 0px 5px;
 }

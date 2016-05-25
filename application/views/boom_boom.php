@@ -7,33 +7,37 @@
 	    <meta charset="utf-8">
   		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- <link rel="stylesheet" type="text/css" href="../../assets/css/stylesheet_boom_boom.css"> -->
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-<!-- <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> -->
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../../assets/css/stylesheet_boom_boom.css">
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
 	</head>
 	
-	<body id="boom_boom_body">
+	<body id="container-fluid">
 	
 		<div class="row">
-			<img id="child_img" src="../assets/img/user_stock_image.png" alt="user">
-		
-			<div class="progress-container">
-  				<div id="boom_bar" class="progressbar" style="width:80%">
-  					<div></div>
-				</div>
-<!-- This is the start of the progress bar.  Should be able to grab the last 20 entries and create an average.  Plug that into the progress bar as increments.  Then adjust from there. -->
-		<!-- Age: <?= date("d M Y", strtotime($datas['date'])) ?> -->
-			<h4 id="boom">!!  Average time till next Boom Boom  !!</h4>
+			<?php if ($child['image'] == 1) { ?><img class='child_image' src="../../assets/img/stk_img-1.png" alt="user"><?php ;} ?>
+			<?php if ($child['image'] == 2) { ?><img class='child_image' src="../../assets/img/stk_img-2.png" alt="user"><?php ;} ?>
+			<?php if ($child['image'] == 3) { ?><img class='child_image' src="../../assets/img/stk_img-3.png" alt="user"><?php ;} ?>
+			<?php if ($child['image'] == 4) { ?><img class='child_image' src="../../assets/img/stk_img-4.png" alt="user"><?php ;} ?>
+			<?php if ($child['image'] == 5) { ?><img class='child_image' src="../../assets/img/stk_img-5.png" alt="user"><?php ;} ?>
+			<?php if ($child['image'] == 6) { ?><img class='child_image' src="../../assets/img/stk_img-6.png" alt="user"><?php ;} ?>
+			<?php if ($child['image'] == 7) { ?><img class='child_image' src="../../assets/img/stk_img-7.png" alt="user"><?php ;} ?>
+			<?php if ($child['image'] == 8) { ?><img class='child_image' src="../../assets/img/stk_img-8.png" alt="user"><?php ;} ?>
+			<?php if (!$child['image']) { ?><img class='child_image' src="../../assets/img/user_stock_image.png" alt="user"><?php ;} ?>
+	
+
+			<h4>!!  Average time till next Boom Boom  !!</h4>
+				<?php echo '<h3>' ?> <?= $event_diff; ?>  <?php '</h3>'; ?>
 
 			</div>
 
 		<div class="row" class="form-group">		
 			
-			<table>
+			<table class="table table-hover">
 				<thead>
 
 					<tr>
@@ -55,7 +59,11 @@
 					  	<td><?= date("h A D", strtotime($datas['time'])) ?></td>
 						<td><?= $datas['amount'] ?></td>
 						<td><?= $datas['comments'] ?></td>
-						<td><?= $datas['person'] ?></td>
+						<td><?= $datas['person']; 
+							if ($datas['user2_id'] == $user['user_id'] ) { ?>
+								<a onclick="return confirmEvent();" href="/main/rem_entry/<?= $datas['boom_id'] ?>" ><span class="glyphicon glyphicon-trash"></span></a>
+							<?php } ?>
+						</td>
 		  			</tr>  
 
 	  					<?php	} ?> 
@@ -73,24 +81,45 @@
 				</tbody>
 			</table>
 
-			<form id="med_entry" method="post" action="/main/add_event/<?= $child['id'] ?>" role='form'>
+			<form method="post" action="/main/add_event/<?= $child['id'] ?>" role='form'>
+
 		 		<input type="hidden" name="category" value="booms" class="form-control">
 		 		<input type="hidden" name="description" value="poop" class="form-control">
-		  		<input type="checkbox" name="amount" value="small" class="form-control">Small
-		  		<input type="checkbox" name="amount" value="avg" class="form-control">Avg
-		  		<input type="checkbox" name="amount" value="large" class="form-control">Large
-		  		<input type="checkbox" name="amount" value="wet" class="form-control">wet
+		 		
+		 		<label>
+		 			<input type="radio" name="amount" value="small" class="form-control">
+		 				<img class="icons" src="../../assets/img/cir1.png">
+		 		</label>
+		  		
+		  		<label>
+		  			<input type="radio" name="amount" value="avg" class="form-control">
+		  				<img class="icons" src="../../assets/img/cir2.png">
+		  		</label>
+
+		  		<label>
+		  			<input type="radio" name="amount" value="large" class="form-control">
+		  				<img class="icons" src="../../assets/img/cir3.jpg">
+		  		</label>
+
+		  		<label>
+		  			<input type="radio" name="amount" value="wet" class="form-control">
+		  				<img class="icons" src="../../assets/img/wet.png">
+		  		</label>
+		</div>
+			<div class="comment-row">
 		  		<label>Comments:</label>
 	      			<input type="text" name="comments" placeholder="comments e.g. strained boom" class="form-control">
 		  		
-		  		<input id="add_boom_btn" type="submit" value="'Log' a boom" class="form-control">
+		  		<input type="submit" value="'Log' a boom" class="form-control btn btn-lg btn-success succ-btn">
 		  		
 			</form>
 
-		</div>
 
-<a href="/main/map">Find a hospital near you</a>
-<a id="go_back" href="/main/select_child/<?= $child['id'] ?>">Go Back</a>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	            	<a class='btn btn-lg btn-success map' href="/main/map">Find a hospital near you</a>
+	            	<a class="btn btn-lg btn-info go_back" href="/main/select_child/<?= $child['id'] ?>">Go Back</a>
+	        	</div>
+        	</div>
 
 	</body>
 

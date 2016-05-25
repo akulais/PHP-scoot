@@ -10,26 +10,37 @@
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <!-- <link rel="stylesheet" type="text/css" href="../assets/css/stylesheet_index.css"> -->
+<link rel="stylesheet" type="text/css" href="../assets/css/stylesheet_index.css">
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 	
 
     </head>
 <!--Start of Body-->
 <body class="container-fluid">
 
-    <h1 class="page-header">Please login or register</h1>
+    <h1 class="page-header">Please <span class="col-g">login</span> or <span class='col-g'>register</span></h1>
 
-    <div class="form-group" class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
         <form method="post" action="/main/register" role='form' class="form-horizontal">
+            
             <input type="hidden" name="action" value="register" class="form-control">
             
-            <div class='col-sm-6'>
-                <label for="name" class="control-label col-sm-2">Name:</label>
-                    <input type="text" name="name" placeholder="Name" class="form-control" id="name">
-                        </div>
+            <div class="form-group">
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <label for="name">Name:</label>
+                </div>
 
-            <div class='col-sm-6'>
-                <label for="role" class="control-label col-sm-2">Role:</label>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <input type="text" name="name" placeholder="Name" class="form-control" id="name">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <label for="role">Role:</label>
+                </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     <select name="role" class="form-control" id="role">
                         <option value="mother">Mother</option>
                         <option value="father">Father</option>
@@ -38,39 +49,72 @@
                         <option value="other_family">Other family member</option>
                         <option value="sitter">Sitter</option>
                     </select>
-                        </div>
+                </div>
+            </div>
 
-            <div class='col-sm-6'>
-                <label id="email" class="control-label col-sm-2">Email:</label>
+            <div class="form-group">
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <label for="email">Email:</label>
+                </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     <input type="text" name="email" placeholder="email" class="form-control" id="email">
-                        </div>
+                </div>
+            </div>
 
-            <div class='col-sm-6'>            
-                <label for="pwd" class="control-label col-sm-2">Password:</label>
+            <div class="form-group"> 
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">           
+                    <label for="password">Password:</label>
+                </div>
+                
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     <input type="password" name="password" placeholder="password" class="form-control" id="pwd">
-                        </div>
+                </div>
+            </div>
 
-            <div class='col-sm-6'>            
-                <label id="cpd" class="control-label col-sm-2">Confirm PW:</label>
+            <div class="form-group"> 
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">           
+                    <label for="confirm_password" class="control-label col-sm-2">Confirm PW:</label>
+                </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     <input  type="password" name="confirm_password" placeholder="Confirm Password" class="form-control" id="cpd">
-                    <input class="btn btn-primary btn-lg" type="submit" value="Register" class="form-control">
-                        </div>
+                </div>
+
+                
+                <div class="form-group">
+                    <div>
+                        <input class="buttons btn btn-lg" type="submit" value="Register" class="form-control">
+                    </div>
+                </div>
+
+            </div>
+
         </form>
 
     </div>
 
 
-    <div class="form-group" class='row'>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
         <form method="post" action="/main/login" role='form' class="form-horizontal">
             <input type="hidden" name="action" value="login" class="form-control">
             
-            <div class='col-sm-6'>
-                <label for="name" class="control-label col-sm-2">Name:</label>
-                    <input type="text" name="name" placeholder="Name" class="form-control" id="name">
-                        </div>
+            <div class="form-group"> 
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">  
+                    <label for="name">Name:</label>
+                </div>
 
-            <div class='col-sm-6'>            
-                <label for="role" class="control-label col-sm-2">Role:</label>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <input type="text" name="name" placeholder="Name" class="form-control" id="name">
+                </div>
+            </div>
+
+            <div class="form-group"> 
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">             
+                    <label for="role">Role:</label>
+                </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     <select name="role" class="form-control" id="role">
                         <option value="mother">Mother</option>
                         <option value="father">Father</option>
@@ -79,15 +123,25 @@
                         <option value="other_family">Other family member</option>
                         <option value="sitter">Sitter</option>
                     </select>
-                        </div>
+                </div>
+            </div>
 
-            <div class='col-sm-6'>                
-                <label for="pwd" class="control-label col-sm-2">Password:</label>
+            <div class="form-group"> 
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">                  
+                    <label for="pwd">Password:</label>
+                </div>
+
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     <input type="password" name="password" placeholder="password" class="form-control" id="pwd">
+                </div>
+
+                <div>
                         <span class="glyphicon glyphicon-hand-right"></span>
-                    <input class="btn btn-primary btn-lg" type="submit" value="Login" class="form-control">
+                    <input class="btn btn-lg buttons" type="submit" value="Login" class="form-control">
                         <span class="glyphicon glyphicon-hand-left"></span>
-                        </div>
+                </div>
+            </div>
+
         </form>
 
     </div>

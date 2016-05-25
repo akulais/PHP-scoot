@@ -1,94 +1,86 @@
-@media only screen and (max-width: 480px) {
-    /*body { background-color: gray; }*/
-    p { font-size: 0.5em; }
-    h1 { font-size: 2.5em; }
-	}
-@media only screen and (min-width: 481px) {
-    /*body { background-color: black; }*/
-    p { font-size: 1em; }
-    h1 { font-size: 4em; }
-	}
-@media only screen and (min-width: 1024px) {
- /*   body { background-color: black; }*/
-    p { font-size: 2em; }
-    h1 { font-size: 5em; }
-	}
-/*index view page css*/
-#boom_boom_body {
-	padding: 20px;
-	background-color: gray;
-	display: inline-block;
-	color: red;
+*   {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    margin: 0 auto;
 }
-#child_img {
+body {
+  background-color: #E8E8E8;
+}
+.header {
+  border-bottom: 3px double black;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 2px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.table  {
+    border: 3px double black;
+    border-radius: 10px;
+    color: gray;
+    margin-top: 25px;
+    width: 80%;
+}
+
+.map {
+  color: green;
+  border-radius: 15px;
+  border: 2px solid black;
+  margin: 25px 5px 0px 5px;
+}
+.go_back {
+  color: purple;
+  text-decoration: none;
+  border-radius: 15px;
+  border: 2px solid black;
+  margin: 25px 5px 0px 5px;
+}
+.child_image {
+  width: 100px;
+  height: 100px;
+}
+.buttons {
+  background-color: #AAADAD;
+  border: 2px solid gray;
+  font-weight: bold;
+  margin: 0 auto;
+}
+.buttons:hover  {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border: 2px solid white;
+}
+label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:5px groove #53537A;
+  border-radius: 20px;
+}
+.icons {
     width: 150px;
     height: 150px;
-    border: 1px solid green;
-    display: inline-block;
-    margin: 25px;
-    vertical-align: top;
+    padding: 5px;
+    border-radius: 100%;
+    border: 4px ridge gray;
+    margin: 10px;
 }
-#top_row {
-	display: inline-block;
-	width: 650px;
-	height: 200px;
-	border: 2px solid black;
+.comment-row {
+  margin: 0 auto;
+  text-align: center;
+  width: 75%;
 }
-#bottom_row {
-	display: inline-block;
-	width: 650px;
-	height: 350px;
-	border: 2px solid black;
-}
-table {
-    width: 590px;
-    height: 200px;
-    margin-left: 25px;  
-}
-table td {
-    width: 95px;
-    height: 25px;
-    text-align: center;
-    border: 1px solid blue;
-}
-#submit_btn {
-	width: 75px;
-	height: 75px;
-	border-radius: 25px;
-	display: inline-block;
-}
-#btn {
-	width: 90px;
-	display: inline-block;
-	vertical-align: top;
-	margin-left: 5px;
-	margin-top: 50px;
-}
-.progress-container {
-	width: 55%;
-	height: 25px;
-	position: relative;
-	border: 2px solid black;
-	border-radius: 20px;
-	margin: 0 auto;
-	background-color: #87CEEB;
-	color: black;
-	display: inline-block;
-	vertical-align: top;
-	margin-left: 20px;
-	margin-top: 80px;
-}
-#boom_bar {
-	color: white;
-	height: 100%;
-	line-height: inherit;
-	background-color: green;
-	position: absolute;
-	border-radius: 20px;
-}
-#boom {
-	margin: 0 auto;
-	margin-left: 25px;
-	color: white;
-	margin-top: 35px;
+.succ-btn {
+  width: 20%;
+  min-width: 150px;
+  color: black;
+  border-radius: 15px;
+  border: 2px solid black;
+  margin: 25px 5px 0px 5px;
 }

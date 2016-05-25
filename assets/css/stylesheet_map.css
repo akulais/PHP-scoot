@@ -1,26 +1,28 @@
-@media only screen and (max-width: 480px) {
-    /*body { background-color: gray; }*/
-    p { font-size: 0.5em; }
-    h1 { font-size: 2.5em; }
-	}
-@media only screen and (min-width: 481px) {
-    /*body { background-color: black; }*/
-    p { font-size: 1em; }
-    h1 { font-size: 4em; }
-	}
-@media only screen and (min-width: 1024px) {
- /*   body { background-color: black; }*/
-    p { font-size: 2em; }
-    h1 { font-size: 5em; }
-	}
-
 /*Map view page css*/
-#map_body {
-	padding: 0px;
-    margin: 0px;
+body {
+	padding: 2.5%;
+    margin: 0 auto;
     height: 100%;
-	background-color: #20B4E6;
+    background-color: black;
+    text-align: center;
 }
-#map {
-    height: 100%;
+.go_back {
+  color: purple;
+  background-color: #AAADAD;
+  text-decoration: none;
+  border-radius: 15px;
+  border: 2px solid gray;
+  margin: 25px 5px 0px 5px;
+}
+.go_back:hover {
+  color: black;
+  background-color: #8C9191;
+  text-decoration: none;
+  border-radius: 15px;
+  border: 2px solid black;
+  margin: 25px 5px 0px 5px;
+}
+.map {
+    border: 4px solid white;
+    height: 500px;
 }

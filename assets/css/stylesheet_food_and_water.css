@@ -1,89 +1,50 @@
-@media only screen and (max-width: 480px) {
-    /*body { background-color: gray; }*/
-    p { font-size: 0.5em; }
-    h1 { font-size: 2.5em; }
-	}
-@media only screen and (min-width: 481px) {
-    /*body { background-color: black; }*/
-    p { font-size: 1em; }
-    h1 { font-size: 4em; }
-	}
-@media only screen and (min-width: 1024px) {
- /*   body { background-color: black; }*/
-    p { font-size: 2em; }
-    h1 { font-size: 5em; }
-	}
-/*index view page css*/
-#food_and_water_body {
-	padding: 20px;
-	background-color: gray;
-	display: inline-block;
-	color: red;
+*   {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
 }
-#child_img {
-    width: 150px;
-    height: 150px;
-    border: 1px solid green;
-    display: inline-block;
-    margin: 25px;
-    vertical-align: top;
+body {
+  background-color: #E8E8E8;
 }
-#top_row {
-	display: inline-block;
-	width: 800px;
-	height: 200px;
-	border: 2px solid black;
-}
-#bottom_row {
-	display: inline-block;
-	width: 800px;
-	height: 200px;
-	border: 2px solid black;
-}
-#likes_dislikes {
-	display: inline-block;
-	width: 575px;
-	height: 200px;
-}
-.top_row {
-	width: 500px;
-	display: inline-block;
+.header {
+	border-bottom: 3px double black;
+	width: 80%;
 	margin: 0 auto;
-	padding: 5px;
+	padding-top: 2px;
+	margin-top: 5px;
+	margin-bottom: 10px;
 }
-.bio {
-	width: 250px;
+.categories {
 	display: inline-block;
+	padding: 5px 25px;
 }
-label {
-	width: 75px;
-	text-align: right;
-	margin-right: 5px;
-	padding: 5px;
+.map {
+  color: green;
+  border-radius: 15px;
+  border: 2px solid black;
+  margin: 25px 5px 0px 5px;
 }
-input {
-	width: 125px;
+.go_back {
+  color: purple;
+  text-decoration: none;
+  border-radius: 15px;
+  border: 2px solid black;
+  margin: 25px 5px 0px 5px;
 }
-.comments_water {
-	width: 230px;
+.child_image {
+	width: 100px;
+	height: 100px;
 }
-.comments_food {
-	width: 230px;
+
+
+.buttons {
+	background-color: #AAADAD;
+	border: 2px solid gray;
+	font-weight: bold;
+	margin: 0 auto;
 }
-#submit_btn {
-	width: 75px;
-	height: 75px;
-	border-radius: 25px;
-	display: inline-block;
-}
-#entries {
-	width: 680px;
-	display: inline-block;
-}
-#btn {
-	width: 90px;
-	display: inline-block;
-	vertical-align: top;
-	margin-left: 5px;
-	margin-top: 50px;
+.buttons:hover	{
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	border: 2px solid white;
 }
